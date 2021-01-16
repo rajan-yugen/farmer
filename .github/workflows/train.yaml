@@ -15,7 +15,7 @@ jobs:
 
           git fetch --prune # get all the git history from the repository
           # we want to see the diff. of metrics wrt to master. It will run whenever we make any pull request to main.
-          dvc metrics diff --show-md master >report.md
+          dvc metrics diff --show-md main >report.md
 
           # Add figure to the report. Here md is markdown
           echo "## Validating results by region"

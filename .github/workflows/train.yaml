@@ -11,9 +11,11 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip install -r requirements.txt
-          dvc repo # it is used to run the dvc pipeline
+          # it is used to run the dvc pipeline
+          dvc repo 
 
-          git fetch --prune # get all the git history from the repository
+          # get all the git history from the repository
+          git fetch --prune 
           # we want to see the diff. of metrics wrt to master. It will run whenever we make any pull request to main.
           dvc metrics diff --show-md main >report.md
 

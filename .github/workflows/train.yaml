@@ -12,7 +12,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           # it is used to run the dvc pipeline
-          dvc repo 
+          dvc repro 
 
           # get all the git history from the repository
           git fetch --prune 
